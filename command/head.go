@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/peak/s5cmd/v2/log"
-	"github.com/peak/s5cmd/v2/log/stat"
-	"github.com/peak/s5cmd/v2/storage"
-	"github.com/peak/s5cmd/v2/storage/url"
-	"github.com/peak/s5cmd/v2/strutil"
+	"github.com/bentoml/s5cmd/v2/log"
+	"github.com/bentoml/s5cmd/v2/log/stat"
+	"github.com/bentoml/s5cmd/v2/storage"
+	"github.com/bentoml/s5cmd/v2/storage/url"
+	"github.com/bentoml/s5cmd/v2/strutil"
 	"github.com/urfave/cli/v2"
 )
 

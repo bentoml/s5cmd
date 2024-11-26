@@ -13,9 +13,9 @@ import (
 	"time"
 
 	"github.com/lanrat/extsort"
-	"github.com/peak/s5cmd/v2/log"
-	"github.com/peak/s5cmd/v2/storage/url"
-	"github.com/peak/s5cmd/v2/strutil"
+	"github.com/bentoml/s5cmd/v2/log"
+	"github.com/bentoml/s5cmd/v2/storage/url"
+	"github.com/bentoml/s5cmd/v2/strutil"
 )
 
 // ErrNoObjectFound indicates there are no objects found from a given directory.

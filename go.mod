@@ -1,4 +1,4 @@
-module github.com/peak/s5cmd/v2
+module github.com/bentoml/s5cmd/v2
 
 go 1.20
 

@@ -1,4 +1,4 @@
-[![Go Report](https://goreportcard.com/badge/github.com/peak/s5cmd/v2)](https://goreportcard.com/report/github.com/peak/s5cmd/v2) ![Github Actions Status](https://github.com/peak/s5cmd/actions/workflows/ci.yml/badge.svg)
+[![Go Report](https://goreportcard.com/badge/github.com/bentoml/s5cmd/v2)](https://goreportcard.com/report/github.com/bentoml/s5cmd/v2) ![Github Actions Status](https://github.com/bentoml/s5cmd/actions/workflows/ci.yml/badge.svg)
 
 ![](./doc/s5cmd_header.jpg)
 
@@ -52,7 +52,7 @@ storage services and local filesystems.
 
 #### Binaries
 
-The [Releases](https://github.com/peak/s5cmd/releases) page provides pre-built
+The [Releases](https://github.com/bentoml/s5cmd/releases) page provides pre-built
 binaries for Linux, macOS and Windows.
 
 #### Homebrew
@@ -108,7 +108,7 @@ make install clean
 You can build `s5cmd` from source if you have [Go](https://golang.org/dl/) 1.19+
 installed.
 
-    go install github.com/peak/s5cmd/v2@master
+    go install github.com/bentoml/s5cmd/v2@master
 
 ⚠️ Please note that building from `master` is not guaranteed to be stable since
 development happens on `master` branch.
@@ -124,7 +124,7 @@ development happens on `master` branch.
     docker run --rm -v $(pwd):/aws -v ~/.aws:/root/.aws peakcom/s5cmd <S3 operation>
 
 #### Build
-    $ git clone https://github.com/peak/s5cmd && cd s5cmd
+    $ git clone https://github.com/bentoml/s5cmd && cd s5cmd
     $ docker build -t s5cmd .
     $ docker run --rm -v ~/.aws:/root/.aws s5cmd <S3 operation>
 
@@ -272,7 +272,7 @@ of the source.
 #### Stream stdin to S3
 You can upload remote objects by piping stdin to `s5cmd`:
 
-    curl https://github.com/peak/s5cmd/ | s5cmd pipe s3://bucket/s5cmd.html
+    curl https://github.com/bentoml/s5cmd/ | s5cmd pipe s3://bucket/s5cmd.html
 
 Or you can compress the data before uploading:
 
@@ -316,7 +316,7 @@ Will copy all the matching objects to the given S3 prefix, respecting the source
 folder hierarchy.
 
 ⚠️ Copying objects (from S3 to S3) larger than 5GB is not supported yet. We have
-an [open ticket](https://github.com/peak/s5cmd/issues/29) to track the issue.
+an [open ticket](https://github.com/bentoml/s5cmd/issues/29) to track the issue.
 
 #### Using Exclude and Include Filters
 `s5cmd` supports the `--exclude` and `--include` flags, which can be used to specify patterns for objects to be excluded or included in commands.
@@ -665,8 +665,8 @@ ERROR "cp s3://somebucket/file.txt file.txt": object already exists
 
 ### numworkers
 
-`numworkers` is a global option that sets the size of the global worker pool. Default value of `numworkers` is [256](https://github.com/peak/s5cmd/blob/master/command/app.go#L18).
-Commands such as `cp`, `select` and `run`, which can benefit from parallelism use this worker pool to execute tasks. A task can be an upload, a download or anything in a [`run` file](https://github.com/peak/s5cmd/blob/master/command/app.go#L18).
+`numworkers` is a global option that sets the size of the global worker pool. Default value of `numworkers` is [256](https://github.com/bentoml/s5cmd/blob/master/command/app.go#L18).
+Commands such as `cp`, `select` and `run`, which can benefit from parallelism use this worker pool to execute tasks. A task can be an upload, a download or anything in a [`run` file](https://github.com/bentoml/s5cmd/blob/master/command/app.go#L18).
 
 For example, if you are uploading 100 files to an S3 bucket and the `--numworkers` is set to 10, then `s5cmd` will limit the number of files concurrently uploaded to 10.
 
@@ -790,4 +790,4 @@ significant runtime difference between those two approaches.
 
 # LICENSE
 
-MIT. See [LICENSE](https://github.com/peak/s5cmd/blob/master/LICENSE).
+MIT. See [LICENSE](https://github.com/bentoml/s5cmd/blob/master/LICENSE).
