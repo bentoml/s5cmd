@@ -4,8 +4,8 @@ import (
 	"flag"
 	"testing"
 
-	"github.com/google/go-cmp/cmp"
 	"github.com/bentoml/s5cmd/v2/storage/url"
+	"github.com/google/go-cmp/cmp"
 	"github.com/urfave/cli/v2"
 )
 
