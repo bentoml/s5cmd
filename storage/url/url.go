@@ -13,8 +13,8 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/lanrat/extsort"
 	"github.com/bentoml/s5cmd/v2/strutil"
+	"github.com/lanrat/extsort"
 )
 
 const (

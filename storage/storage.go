@@ -12,10 +12,10 @@ import (
 	"os"
 	"time"
 
-	"github.com/lanrat/extsort"
 	"github.com/bentoml/s5cmd/v2/log"
 	"github.com/bentoml/s5cmd/v2/storage/url"
 	"github.com/bentoml/s5cmd/v2/strutil"
+	"github.com/lanrat/extsort"
 )
 
 // ErrNoObjectFound indicates there are no objects found from a given directory.
